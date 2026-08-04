@@ -35,6 +35,9 @@ RUN apt-get update \
         "git+https://github.com/cocodataset/panopticapi.git#egg=panopticapi" \
     \
  && python -m pip install \
+        ipykernel \
+        ipywidgets \
+        opencv-python-headless \
         submitit \
         scipy==1.10.1 \
         termcolor==2.4.0 \
