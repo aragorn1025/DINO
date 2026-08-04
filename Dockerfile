@@ -35,15 +35,15 @@ RUN apt-get update \
         "git+https://github.com/cocodataset/panopticapi.git#egg=panopticapi" \
     \
  && python -m pip install \
+        addict \
         ipykernel \
         ipywidgets \
         opencv-python-headless \
         submitit \
         scipy==1.10.1 \
         termcolor==2.4.0 \
-        addict \
-        yapf==0.32.0 \
         timm==0.6.13 \
+        yapf==0.32.0 \
     ;
 
 CMD ["bash"]
