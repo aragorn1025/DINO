@@ -1,19 +1,18 @@
-build:
-	docker compose build
-.PHONY: build
+SHELL := /bin/bash
 
+DOCKER_COMPOSE := docker compose
+
+.PHONY: build up exec down
+
+build:
+	$(DOCKER_COMPOSE) build
 
 up:
-	docker compose up -d
-	docker compose exec dino bash -c "cd models/dino/ops && python setup.py build install && python test.py"
-.PHONY: up
-
+	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) exec -T dino bash -c "cd models/dino/ops && python setup.py build install && python test.py"
 
 exec:
-	docker compose exec dino bash
-.PHONY: exec
-
+	$(DOCKER_COMPOSE) exec dino bash
 
 down:
-	docker compose down
-.PHONY: down
+	$(DOCKER_COMPOSE) down
