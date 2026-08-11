@@ -27,4 +27,4 @@ scripts/
 models/dino/ops/build/
 models/dino/ops/dist/
 models/dino/ops/*.egg-info
-compose.override.yml
+compose.override.yaml
