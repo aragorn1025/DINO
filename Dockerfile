@@ -36,10 +36,20 @@ RUN apt-get update \
     \
  && python -m pip install \
         addict \
+        albumentations==1.3.0 \
+        ipdb \
+        ipykernel \
+        ipywidgets \
+        matplotlib \
+        opencv-python-headless \
+        pillow \
+        pyyaml \
         scipy==1.10.1 \
+        seaborn \
         submitit \
         termcolor==2.4.0 \
         timm==0.6.13 \
+        tqdm \
         yapf==0.32.0 \
     ;
 
